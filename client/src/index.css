@@ -252,3 +252,10 @@ body { letter-spacing:.008em; }
 @media (max-width:760px) {
   .hero-ident-dot-black { width:7.2px; height:7.2px; }
 }
+
+/* Internal page number boxes: one burnt-orange point at the top-right 38% position. */
+.intro-index { position:relative; }
+.intro-dot { position:absolute; width:6px; height:6px; right:38%; top:38%; transform:translate(50%, -50%); border-radius:50%; background:var(--orange); display:block; }
+@media (max-width:760px) {
+  .intro-dot { width:5px; height:5px; }
+}

@@ -11218,3 +11218,12 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Keep the Get in Touch CTA dots black.
 - [x] Verify the mixed dot-color system at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Internal page number-box dots — 2026-09-02
+
+- [x] Add burnt-orange dots to the golden-ratio number boxes on all internal pages.
+- [x] Position each dot at 38% from the top and 38% from the right edge.
+- [x] Leave the home hero black dot unchanged.
+- [x] Leave header/footer white dots and CTA black dots unchanged.
+- [x] Verify representative internal pages at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
