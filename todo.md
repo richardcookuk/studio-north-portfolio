@@ -11034,3 +11034,11 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Prevent grid constraints and minimum height from making the frame appear square.
 - [x] Verify the proportion at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Page 01 subhead refinement — 2026-09-02
+
+- [x] Use the combined approved sentences as the Page 01 subhead.
+- [x] Add a keyline below the Page 01 introduction.
+- [x] Lead the body with “Richard’s experience and work brings these perspectives together:”.
+- [x] Verify Page 01 at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.

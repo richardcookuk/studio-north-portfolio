@@ -164,3 +164,9 @@ body { letter-spacing:.008em; }
 .intro-index { width:100%; max-width:250px; min-height:0; height:auto; aspect-ratio:1.618 / 1; align-self:start; }
 @media (max-width:1050px) { .page-intro { grid-template-columns:minmax(200px,.34fr) minmax(0,1fr); } }
 @media (max-width:760px) { .page-intro { display:block; } .intro-index { width:min(100%,210px); max-width:210px; min-height:0; aspect-ratio:1.618 / 1; } }
+
+/* Page 01 hierarchy: the supplied positioning sits above the keyline; the supplied lead begins the body. */
+.page01-body { padding-top:7vw; }
+.copy-keyline { width:100%; border-top:1px solid var(--line); margin-bottom:30px; }
+.lead-line { font-size:clamp(22px,2.4vw,34px)!important; line-height:1.12!important; color:var(--ink)!important; max-width:760px; }
+@media (max-width:760px) { .page01-body { padding-top:55px; } }
