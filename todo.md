@@ -11056,3 +11056,10 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Replace it with “Newsroom And Media Readiness Test” if present.
 - [x] Run checks and verify the rendered Page 03 route.
 - [ ] Save a new checkpoint after verification.
+
+## Page 03 wording verification — 2026-09-02
+
+- [x] Confirm the current source still contains “Newsroom And Media Readiness Test”.
+- [x] Replace it with “Media and Newsroom Readiness Test” if present.
+- [x] Run checks and verify the rendered Page 03 route.
+- [ ] Save a new checkpoint after verification.
