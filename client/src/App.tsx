@@ -1,42 +1,92 @@
+/*
+ * Richard Cook Strategic Communications — editorial briefing interface.
+ * Burnt-orange, white, and near-black; typography-led, discreet, and senior.
+ */
+import { useEffect, useState } from "react";
+import { Link, Route, Switch, useLocation } from "wouter";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
 
+const nav = [
+  { href: "/", label: "Home", short: "Home" },
+  { href: "/brings", label: "What Richard Cook Brings", short: "What he brings" },
+  { href: "/expertise", label: "Areas of Expertise", short: "Expertise" },
+  { href: "/working-with-richard", label: "Working with Richard", short: "Working with Richard" },
+  { href: "/integrating", label: "Integrating Strategy, Media and Reputation", short: "Integrating" },
+  { href: "/case-studies", label: "Richard’s Work — Case Studies", short: "Case studies" },
+  { href: "/testimonials", label: "Testimonials", short: "Testimonials" },
+];
 
-function Router() {
-  return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
-  );
+const cases = [
+  { number: "01", type: "Crisis management", title: "Fukushima nuclear accident", date: "2011", summary: "Maintaining technical authority, reputational sensitivity and staff welfare across a fast-moving international crisis.", detail: "Richard worked with a well-established UK organisation with internationally recognised technical and regulatory expertise in the nuclear sector as it managed reputational and operational risks during and after the Fukushima nuclear accident. He established clear lines of communication and consistent messaging across the UK, Japan and beyond, helping position experts as trusted thought-leader voices while supporting staff and families under pressure." },
+  { number: "02", type: "Crisis management", title: "India", date: "2008", summary: "Containing an escalating international breaking-news story involving allegations of resource mismanagement, contamination and pollution.", detail: "Richard worked for several months with a major global brand, first remotely and later from within India. He aligned internal and external communications, worked across the highest levels of the organisation, engaged media and government stakeholders, and helped contain reputational risk. The organisation maintained confidence and market share among key audiences; the relevant government authorities did not substantiate the allegations." },
+  { number: "03", type: "Stakeholder communications", title: "Pan-Asia", date: "2005–2014", summary: "Turning functional regional communications into a distinctive, design-led publishing platform for a global consumer brand.", detail: "Richard oversaw the creation, launch and management of a family of Asia-wide magazines and websites spanning Japan to Pakistan. Combining contemporary design with magazine and newsroom techniques, he built editorial frameworks that made the platforms relevant, engaging, visually distinctive and useful for media relations and critical issues. The model was later adopted for global internal and stakeholder communications." },
+  { number: "04", type: "Investor and regulatory relations", title: "Hong Kong and UAE", date: "2025", summary: "Supporting investor confidence and complex regulatory positioning for a fintech and green investment firm.", detail: "Richard worked closely with cross-jurisdictional legal, trading and administrative teams to ensure communications were clear, consistent and credible across stakeholders. His work supported the firm’s successful application for in-principle approval from the Financial Services Regulatory Authority for a trading licence in Abu Dhabi Global Market. The relationship continues." },
+  { number: "05", type: "Media", title: "News platform creation and launch", date: "2020–2026", summary: "Building a Hong Kong-based financial news platform and virtual newsroom through the Covid-19 lockdowns.", detail: "Richard assembled a geographically diverse team of journalists, multimedia editors, data specialists, commentators and analysts to create a targeted editorial platform focused on new economy and technology markets. Working with a specialist data team, he integrated content with a sister index platform. Within two years, the site had published almost 20,000 articles and related multimedia content and attracted close to 500,000 page views a month." },
+  { number: "06", type: "Stakeholder and investor relations", title: "Global logistics conglomerate", date: "2009–2010", summary: "Correcting a legacy perception by documenting the real journey of one shipping container across five continents.", detail: "Richard pitched the project at board level in Tokyo and travelled with the production team to manage the multimedia documentary that followed the container’s 125,000-kilometre journey carrying different cargo across five continents. The project received strong industry recognition and became the basis for a major mainstream media documentary led by the BBC, extending the work far beyond the organisation’s immediate stakeholder audience." },
+  { number: "07", type: "International stakeholder and cultural relations", title: "Italy and China", date: "2008", summary: "Using a coffee-table book and travelling photography exhibition to support cultural diplomacy and long-term relationship-building.", detail: "Following the city’s hosting of the Winter Olympics, Richard devised, developed and delivered a multimedia project over more than two years. The book and exhibition were used at governmental, Olympic, cultural and trade events, creating a lasting record of the region while supporting the municipal authority’s international relationship-building objectives with the next Asian host city." },
+];
+
+const testimonials = [
+  { name: "Dr Christian Kronseder", role: "CEO, ALLINDEX", note: "Custom indexing and thematic portfolio construction", quote: "I have worked closely with Richard for more than five years and he excels at translating complex, index-based themes into clear, compelling narratives that can be widely understood. Another notable attribute is his ability to build, manage and motivate teams. His leadership and balancing of multi-skilled editorial and data teams has made the complex task of combining thematic index portfolios with media content as straightforward as it can be." },
+  { name: "Louis Benito", role: "Innovation and Co-creation Director, Lloyd’s Register Asia", note: "", quote: "Richard is a skilled communications professional who has a talent for integrating media engagement with group vision and clever strategic internal and external events. He’s a great person to work with, and I would welcome the opportunity to do so again." },
+  { name: "Robert Swan OBE", role: "Explorer and Founder, 2041 Foundation", note: "First person in history to walk to both the South Pole and the North Pole", quote: "Richard Cook has been a good friend to the 2041 Foundation. He’s helped significantly for many years with media liaison in Asia and with fundraiser engagement. He also came to Antarctica with us where he was a great and enthusiastic team member and also gave very good media training to expedition participants." },
+  { name: "David Cox", role: "Coca-Cola Asia Communications Director", note: "", quote: "Richard is very good at what he does. He knows media and news methodologies very well and how to engagingly and strategically embed that into corporate narratives. His skills and judgment have proved invaluable to us." },
+];
+
+function Logo() {
+  return <Link href="/" className="brand" aria-label="Richard Cook Strategic Communications home"><span className="brand-mark" aria-hidden="true"><span /></span><span className="brand-copy"><strong>RICHARD COOK</strong><small>STRATEGIC COMMUNICATIONS</small></span></Link>;
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
-function App() {
-  return (
-    <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
-  );
+function Layout({ children }: { children: React.ReactNode }) {
+  const [location] = useLocation();
+  const [open, setOpen] = useState(false);
+  useEffect(() => setOpen(false), [location]);
+  return <div className="site-shell">
+    <header className="site-header">
+      <Logo />
+      <button className="menu-button" aria-label={open ? "Close navigation" : "Open navigation"} onClick={() => setOpen(!open)}>{open ? <X size={21} /> : <Menu size={21} />}<span>Menu</span></button>
+      <nav className={open ? "site-nav is-open" : "site-nav"} aria-label="Primary navigation">
+        {nav.map((item, index) => <Link key={item.href} href={item.href} className={location === item.href ? "nav-link active" : "nav-link"}><span className="nav-number">0{index + 1}</span>{item.label}</Link>)}
+      </nav>
+      <div className="header-meta"><span>North Yorkshire / Global</span><span>Strategic counsel, media, crisis</span></div>
+    </header>
+    <main>{children}</main>
+    <footer className="site-footer"><div><Logo /><p className="footer-line">Clear, credible strategic communications, media counsel and crisis response.</p></div><div className="footer-links"><span className="eyebrow">Briefing index</span>{nav.map((item, index) => <Link key={item.href} href={item.href}><span className="footer-number">0{index + 1}</span>{item.label}</Link>)}</div><div className="footer-contact"><span className="eyebrow">Start a conversation</span><Link href="/contact" className="text-link">Arrange a confidential conversation <ArrowUpRight size={15} /></Link><p>© Richard Cook Strategic Communications</p></div></footer>
+  </div>;
 }
 
-export default App;
+function Eyebrow({ children }: { children: React.ReactNode }) { return <div className="eyebrow"><span className="eyebrow-dot" />{children}</div>; }
+function PageIntro({ index, title, intro }: { index: string; title: string; intro: string }) { return <section className="page-intro"><div className="intro-index">{index}</div><div><Eyebrow>Richard Cook Strategic Communications</Eyebrow><h1>{title}</h1><p className="intro-copy">{intro}</p></div></section>; }
+function CTA({ children = "Arrange a confidential conversation" }: { children?: React.ReactNode }) { return <Link href="/contact" className="cta"><span>{children}</span><ArrowUpRight size={17} /></Link>; }
+function SplitSection({ label, title, children, dark = false }: { label: string; title: string; children: React.ReactNode; dark?: boolean }) { return <section className={dark ? "split-section dark-panel" : "split-section"}><div className="section-label"><span className="eyebrow-dot" />{label}</div><div><h2>{title}</h2><div className="section-body">{children}</div></div></section>; }
+function TextList({ items }: { items: string[] }) { return <ul className="text-list">{items.map((item) => <li key={item}><span className="list-mark">↳</span><span>{item}</span></li>)}</ul>; }
+
+function Home() { return <>
+  <section className="hero"><div className="hero-copy"><Eyebrow>Independent strategic communications counsel</Eyebrow><h1>Richard Cook<br /><em>Strategic</em><br />Communications</h1><p className="hero-sub">Clear, credible strategic communications, media counsel and crisis response.</p><p className="hero-body">Richard Cook provides strategic communications, media strategy and crisis counsel to leaders and organisations facing complexity, scrutiny or change.</p><CTA /></div><div className="hero-art"><div className="art-mark"><span /><i /><b /></div><p>01 / Make sense of complexity<br />02 / Communicate with authority<br />03 / Protect credibility</p></div><div className="hero-scroll">Scroll to explore <span>↓</span></div></section>
+  <section className="home-brief"><div className="section-label">The proposition</div><div><h2>Three decades across brands, newsrooms and high-stakes reputation management.</h2><div className="home-brief-grid"><p>His work brings together experience across global consumer brands, technical and regulatory authorities, index and data businesses, environmental and carbon platforms, expeditions, fintech and investment firms, logistics and transportation conglomerates, and media and news platforms.</p><p>Richard has worked globally and is now based in North Yorkshire. He typically works on long-term and retainer assignments, while also undertaking advisory projects.</p></div><Link href="/brings" className="text-link">What Richard Cook brings <ArrowUpRight size={15} /></Link></div></section>
+  <section className="home-ribbon"><div className="ribbon-label">Available for</div><div className="ribbon-items"><span>Crisis response</span><span>Strategic communications reviews</span><span>Media platform development</span></div><CTA /></section>
+</>; }
+
+function Brings() { return <><PageIntro index="01" title="What Richard Cook brings" intro="Complex organisational communications rarely belong to a single discipline." /><SplitSection label="The integrated view" title="Brand, media, stakeholder expectations, leadership behaviour and operational realities are closely connected."><p>Richard’s experience and work brings these perspectives together. This integrated approach better equips organisations to think clearly, align effectively and act credibly — strategically and operationally.</p><TextList items={["Strategic communications — aligning communications with organisational purpose and commercial priorities.", "Brand and reputation — clarifying positioning and strengthening credibility.", "Newsroom and media insight — testing whether narratives and claims withstand scrutiny.", "International judgement — honing communications across markets, cultures and regulatory environments.", "Crisis response — helping leadership teams prepare, plan and communicate under pressure."]} /></SplitSection><section className="statement-section"><div className="statement-copy"><Eyebrow>Briefing note</Eyebrow><p>In an increasingly volatile, scrutinised and competitive world, Richard Cook works with leaders and organisations to <strong>turn complexity into clarity, align communications with action and retain the credibility needed to earn trust and succeed.</strong></p></div><CTA /></section></>; }
+
+function Expertise() { return <><PageIntro index="02" title="Richard’s areas of expertise" intro="Advice for leaders and organisations navigating reputation, visibility, scrutiny and change." /><SplitSection label="Advice" title="Senior judgement across the communications challenges that matter most."><TextList items={["Reputation and positioning.", "Executive voice and visibility.", "Media, investor and stakeholder strategy.", "Crisis preparedness and response.", "International communications.", "High-stakes announcements, change and reputational challenges."]} /></SplitSection><SplitSection label="Who he works with" title="When the story is complex, the stakes are high or specialist capacity is needed."><TextList items={["Founder-led companies entering a more visible phase.", "International businesses expanding into unfamiliar markets.", "Regulated or politically-exposed organisations.", "Technology and fintech companies with complex narratives and propositions.", "Professional-services firms seeking to turn internal expertise into stronger public thought-leadership authority.", "Organisations facing controversy, investigation, restructuring or leadership transition.", "Corporate affairs teams seeking discreet, senior white-label counsel on complex, high-stakes assignments.", "Boards and executive teams without sufficient specialist communications capacity."]} /></SplitSection><section className="orange-panel"><Eyebrow>Need a senior view?</Eyebrow><h2>Start with the issue creating the most strategic or reputational drag.</h2><CTA children="Discuss a confidential session" /></section></>; }
+
+function Working() { return <><PageIntro index="03" title="Working with Richard" intro="Long-term, retainer and day-level engagements, shaped around the communications challenge in front of you." /><SplitSection label="The first step" title="Focused one-day intro sessions for organisations seeking senior advice before committing to a broader programme."><div className="session-grid">{[{n:"01",t:"One-Day Communications Diagnostic",b:"Identify the communications issue creating the greatest strategic or reputational drag — to establish the priorities for addressing it."},{n:"02",t:"Newsroom Test",b:"Put your narrative, claims and spokespeople under informed journalistic pressure before any real conversation begins."},{n:"03",t:"Reputational Readiness Session",b:"Test leadership assumptions, identify pressure points and clarify what needs to happen before an issue becomes a crisis."}].map((s) => <article className="session" key={s.n}><span>{s.n}</span><h3>{s.t}</h3><p>{s.b}</p></article>)}</div><p className="closing-note">Each session is confidential and senior-led, with practical decisions and clear next steps as outputs.</p><CTA children="Discuss a confidential session" /></SplitSection><div className="work-note"><span className="giant-word">Discreet.</span><p>Richard works with a wide-ranging list of companies, organisations and governments in a variety of long-term projects and retainers, and can also work on day-level engagements.</p></div></>; }
+
+function Integrating() { return <><PageIntro index="04" title="Integrating strategy, media and reputation" intro="One coherent professional capability, built across geographies, sectors and communications disciplines." /><SplitSection label="Experience" title="Making sense of complexity, communicating with authority and protecting credibility when the stakes are high."><p>Richard Cook’s career has won awards and crossed geographies, sectors and communications disciplines. His experience includes advising senior leaders, public institutions and major international companies on sensitive issues spanning communications, media, reputation and crisis management.</p><p>Richard lived and worked in Asia for more than 20 years, operating across complex markets and international, regulated environments. He and his family are now based in North Yorkshire, while his work remains international in outlook and reach.</p></SplitSection><SplitSection label="The independent model" title="Direct with leaders, or alongside corporate affairs teams requiring additional senior counsel."><p>Richard works independently and discreetly. His varied experience has consolidated into one coherent professional capability: integrating strategic, editorial, brand, international and crisis judgement to understand complex communications challenges and help organisations address them credibly.</p><div className="inline-actions"><Link href="/case-studies" className="text-link">Read selected experience <ArrowUpRight size={15} /></Link><a href="https://www.linkedin.com" className="text-link" target="_blank" rel="noreferrer">Connect on LinkedIn <ArrowUpRight size={15} /></a></div></SplitSection><section className="dark-cta"><Eyebrow>Confidential by design</Eyebrow><h2>Facing a communications, reputation or media challenge?</h2><CTA /></section></>; }
+
+function CaseStudies() { return <><PageIntro index="05" title="Richard’s work — case studies" intro="Examples of work across strategic communications, crisis response, media, stakeholder engagement and international relations." /><section className="case-intro"><p>To respect client confidentiality, names are withheld in selected cases. The examples are not exhaustive; Richard also undertakes ongoing assignments that are not detailed here.</p></section><section className="case-list">{cases.map((item) => <article className="case-row" key={item.number}><div className="case-number">{item.number}</div><div className="case-main"><div className="case-meta"><span>{item.type}</span><span>{item.date}</span></div><h2>{item.title}</h2><p>{item.summary}</p><details><summary>Read case note <ArrowUpRight size={15} /></summary><p className="case-detail">{item.detail}</p></details></div></article>)}</section></>; }
+
+function Testimonials() { return <><PageIntro index="06" title="Testimonials" intro="A few reflections from leaders and collaborators Richard has worked with across media, data, culture and corporate communications." /><section className="testimonial-list">{testimonials.map((item, i) => <figure className="testimonial" key={item.name}><div className="quote-mark">“</div><blockquote>{item.quote}”</blockquote><figcaption><strong>{item.name}</strong><span>{item.role}</span>{item.note && <small>{item.note}</small>}</figcaption><div className="testimonial-index">0{i + 1}</div></figure>)}</section><section className="statement-section"><div className="statement-copy"><Eyebrow>Working principle</Eyebrow><p>Good communications judgement is built through experience, scrutiny and trust.</p></div><CTA /></section></>; }
+
+function Contact() { return <><section className="page-intro contact-intro"><div><Eyebrow>Richard Cook Strategic Communications</Eyebrow><h1>Arrange a confidential conversation</h1><p className="intro-copy">If a communications, reputation or media challenge is creating uncertainty, Richard can help establish what matters most and what needs to happen next.</p></div></section><section className="contact-section"><div><Eyebrow>A considered first step</Eyebrow><h2>All enquiries are welcome.</h2><p>Richard is available for crisis response, strategic communications reviews and media platform development. He typically works on long-term and retainer assignments, but is also available for advisory projects.</p></div><div className="contact-card"><span className="eyebrow">Contact details</span><p className="contact-placeholder">A discreet first conversation about the issue, the context and the questions.</p><p className="contact-note">Contact details can be added here when Richard’s preferred enquiry route is confirmed.</p></div></section><section className="orange-panel contact-panel"><Eyebrow>Next</Eyebrow><h2>Bring the issue, the context and the questions. We can take it from there.</h2><Link href="/" className="cta secondary"><span>Return to home</span><ArrowUpRight size={17} /></Link></section></>; }
+
+function NotFound() { return <section className="not-found"><Eyebrow>404 / Not found</Eyebrow><h1>That page is not in the briefing.</h1><Link href="/" className="text-link">Return home <ArrowUpRight size={15} /></Link></section>; }
+
+function Router() { return <Switch><Route path="/" component={Home} /><Route path="/brings" component={Brings} /><Route path="/expertise" component={Expertise} /><Route path="/working-with-richard" component={Working} /><Route path="/integrating" component={Integrating} /><Route path="/case-studies" component={CaseStudies} /><Route path="/testimonials" component={Testimonials} /><Route path="/contact" component={Contact} /><Route component={NotFound} /></Switch>; }
+
+export default function App() { return <ErrorBoundary><ThemeProvider defaultTheme="light"><TooltipProvider><Toaster /><Layout><Router /></Layout></TooltipProvider></ThemeProvider></ErrorBoundary>; }
