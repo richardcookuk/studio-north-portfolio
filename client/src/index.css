@@ -195,7 +195,7 @@ body { letter-spacing:.008em; }
 /* Ident refinement: a more present lockup with one white dot at the rectangle's power point. */
 .brand { gap:14px; }
 .brand-mark { width:22px; height:36px; position:relative; }
-.brand-dot { position:absolute; width:6px; height:6px; right:38%; top:38%; transform:translate(50%, -50%); border-radius:50%; background:var(--paper); display:block; }
+.brand-dot { position:absolute; width:6px; height:6px; right:38%; top:38%; transform:translate(50%, -50%); border-radius:50%; background:var(--ink); display:block; }
 .brand-copy strong { font-size:14px; }
 .brand-copy small { font-size:8px; margin-top:6px; }
 @media (max-width:760px) {
@@ -230,7 +230,7 @@ body { letter-spacing:.008em; }
 
 /* CTA dot motif: the same white point as the ident, centred vertically and set 38% in from the right edge. */
 .cta { position:relative; justify-content:flex-start; }
-.cta-dot { position:absolute; width:6px; height:6px; right:38%; top:50%; transform:translate(50%, -50%); border-radius:50%; background:var(--paper); display:block; }
+.cta-dot { position:absolute; width:6px; height:6px; right:38%; top:50%; transform:translate(50%, -50%); border-radius:50%; background:var(--ink); display:block; }
 @media (max-width:760px) {
   .cta-dot { width:5px; height:5px; }
 }
@@ -242,4 +242,13 @@ body { letter-spacing:.008em; }
 .page01-subhead { max-width:760px; color:var(--ink); font-size:clamp(25px, 3.1vw, 42px); line-height:1.08; font-weight:700; letter-spacing:-.045em; }
 @media (max-width:760px) {
   .page01-subhead { font-size:clamp(23px, 6.4vw, 32px); line-height:1.1; }
+}
+
+/* Home hero final dot: one dark point at the top-right 38% position. */
+.hero-ident-dot-black { background:var(--ink); }
+
+/* Home hero black dot size: a restrained increase, with the approved position unchanged. */
+.hero-ident-dot-black { width:8.4px; height:8.4px; }
+@media (max-width:760px) {
+  .hero-ident-dot-black { width:7.2px; height:7.2px; }
 }

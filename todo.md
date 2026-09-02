@@ -11174,3 +11174,37 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Preserve the approved wording exactly.
 - [x] Verify Page 01 at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Home hero single black dot — 2026-09-02
+
+- [ ] Remove the three white dots from the home hero ident.
+- [ ] Keep one black dot at the top-right power point.
+- [ ] Position its centre 38% from the top and 38% from the right edge.
+- [ ] Leave header/footer ident and CTA dots unchanged.
+- [ ] Verify the hero ident at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
+
+## Home hero black dot size — 2026-09-02
+
+- [ ] Increase only the black dot on the home hero ident by no more than 20%.
+- [ ] Preserve the top-right 38% position.
+- [ ] Leave the white dots, header/footer dots, and CTA dots unchanged.
+- [ ] Verify the revised dot at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
+
+## Black ident dots — 2026-09-02
+
+- [ ] Change the header ident dot from white to black.
+- [ ] Change the footer ident dot from white to black.
+- [ ] Change the dot inside every “Get in Touch” button from white to black.
+- [ ] Preserve the home hero black dot, positions, sizes, button proportions, and email links.
+- [ ] Verify the dot treatment at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
+
+## Home hero black dot second increase — 2026-09-02
+
+- [x] Increase the home hero black dot by another 20%.
+- [x] Preserve its top-right 38% position.
+- [x] Leave header, footer, and CTA dots unchanged.
+- [x] Verify the revised hero ident at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
