@@ -11166,3 +11166,11 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [ ] Leave header/footer ident dots and CTA dots unchanged.
 - [ ] Verify the hero ident at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Page 01 subhead hierarchy refinement — 2026-09-02
+
+- [x] Restyle the approved Page 01 opening paragraph as a larger bold subhead.
+- [x] Keep the copy after the keyline in the smaller body style.
+- [x] Preserve the approved wording exactly.
+- [x] Verify Page 01 at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
