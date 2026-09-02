@@ -11097,3 +11097,11 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Keep the dot visible but understated and preserve the golden-ratio grid.
 - [x] Verify the header and footer ident at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Footer spacing and ident dot correction — 2026-09-02
+
+- [x] Tighten the gap between the copyright symbol and `richardcook.uk`.
+- [x] Move the white dot to the specified lower-right power-point position: 38% from the right and 38% from the bottom.
+- [x] Preserve the currently approved dot size.
+- [x] Verify the ident and footer at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
