@@ -10986,3 +10986,11 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [ ] Frontend motif implementation pending.
 - [ ] Contact link verification pending.
 - [ ] New checkpoint pending.
+
+## Home page revision — 2026-09-02
+
+- [ ] Remove the main burnt-orange hero block containing “Arrange a Confidential Conversation”.
+- [ ] Rebalance the home hero so the headline and supporting copy hold the opening composition.
+- [ ] Keep the separate text CTA below the headline available and linked to `mailto:hello@richardcook.uk`.
+- [ ] Verify home page spacing at desktop, tablet, and mobile widths.
+- [ ] Save a new checkpoint after verification.

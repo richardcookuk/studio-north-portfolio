@@ -137,3 +137,9 @@ details summary::-webkit-details-marker { display:none; }
 /* Style decisions accepted from the visual review: one fixed seven-part numbering sequence, a recurring document spine, and visitor-facing contact language. */
 
 .preferences-spine { border-left:1px solid var(--orange); }
+
+/* Home revision: the headline is the hero composition; no competing orange block. */
+.hero-without-art { grid-template-columns:minmax(0,1fr); }
+.hero-without-art .hero-copy { max-width:900px; }
+.hero-without-art h1 { max-width:900px; }
+@media (max-width:1050px) { .hero-without-art { grid-template-columns:minmax(0,1fr); } }
