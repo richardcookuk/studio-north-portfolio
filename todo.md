@@ -11208,3 +11208,13 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Leave header, footer, and CTA dots unchanged.
 - [x] Verify the revised hero ident at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Header and footer ident white dots — 2026-09-02
+
+- [x] Restore the header ident dot to white.
+- [x] Restore the footer ident dot to white.
+- [x] Preserve their current positions and sizes.
+- [x] Keep the home hero dot black.
+- [x] Keep the Get in Touch CTA dots black.
+- [x] Verify the mixed dot-color system at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
