@@ -44,7 +44,7 @@ function Logo() {
 function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
   const [open, setOpen] = useState(false);
-  useEffect(() => setOpen(false), [location]);
+  useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior }); setOpen(false); }, [location]);
   return <div className="site-shell">
     <header className="site-header">
       <Logo />
@@ -54,7 +54,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       </nav>
       <div className="header-meta"><span>North Yorkshire / Global</span><span>Strategic counsel, media, crisis</span></div>
     </header>
-    <main>{children}</main>
+    <main key={location} className="page-main">{children}</main>
     <footer className="site-footer"><div><Logo /><p className="footer-line">Clear, credible strategic communications, media counsel and crisis response.</p></div><div className="footer-links"><span className="eyebrow">Briefing index</span>{nav.map((item, index) => <Link key={item.href} href={item.href}><span className="footer-number">0{index + 1}</span>{item.label}</Link>)}</div><div className="footer-contact"><span className="eyebrow">Start a conversation</span><Link href="/contact" className="text-link">Arrange a confidential conversation <ArrowUpRight size={15} /></Link><p>© Richard Cook Strategic Communications</p></div></footer>
   </div>;
 }
@@ -67,9 +67,7 @@ function TextList({ items }: { items: string[] }) { return <ul className="text-l
 
 function Home() { return <>
   <section className="hero hero-without-art"><div className="hero-copy"><Eyebrow>Independent strategic communications counsel</Eyebrow><h1>Richard Cook<br /><em>Strategic</em><br />Communications</h1><p className="hero-sub">Clear, credible strategic communications, media counsel and crisis response.</p><p className="hero-body">Richard Cook provides strategic communications, media strategy and crisis counsel to leaders and organisations facing complexity, scrutiny or change.</p><CTA /></div><div className="hero-scroll">Scroll to explore <span>↓</span></div></section>
-  <section className="home-brief"><div className="section-label">The proposition</div><div><h2>Three decades across brands, newsrooms and high-stakes reputation management.</h2><div className="home-brief-grid"><p>His work brings together experience across global consumer brands, technical and regulatory authorities, index and data businesses, environmental and carbon platforms, expeditions, fintech and investment firms, logistics and transportation conglomerates, and media and news platforms.</p><p>Richard has worked globally and is now based in North Yorkshire. He typically works on long-term and retainer assignments, while also undertaking advisory projects.</p></div><Link href="/brings" className="text-link">What Richard Cook brings <ArrowUpRight size={15} /></Link></div></section>
-  <section className="home-ribbon"><div className="ribbon-label">Available for</div><div className="ribbon-items"><span>Crisis response</span><span>Strategic communications reviews</span><span>Media platform development</span></div><CTA /></section>
-</>; }
+  </>; }
 
 function Brings() { return <><PageIntro index="01" title="What Richard Cook brings" intro="Complex organisational communications rarely belong to a single discipline." /><SplitSection label="The integrated view" title="Brand, media, stakeholder expectations, leadership behaviour and operational realities are closely connected."><p>Richard’s experience and work brings these perspectives together. This integrated approach better equips organisations to think clearly, align effectively and act credibly — strategically and operationally.</p><TextList items={["Strategic communications — aligning communications with organisational purpose and commercial priorities.", "Brand and reputation — clarifying positioning and strengthening credibility.", "Newsroom and media insight — testing whether narratives and claims withstand scrutiny.", "International judgement — honing communications across markets, cultures and regulatory environments.", "Crisis response — helping leadership teams prepare, plan and communicate under pressure."]} /></SplitSection><section className="statement-section"><div className="statement-copy"><Eyebrow>Briefing note</Eyebrow><p>In an increasingly volatile, scrutinised and competitive world, Richard Cook works with leaders and organisations to <strong>turn complexity into clarity, align communications with action and retain the credibility needed to earn trust and succeed.</strong></p></div><CTA /></section></>; }
 

@@ -10994,3 +10994,12 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [ ] Keep the separate text CTA below the headline available and linked to `mailto:hello@richardcook.uk`.
 - [ ] Verify home page spacing at desktop, tablet, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Standalone page revision — 2026-09-02
+
+- [x] Define distinct page boundaries for the seven primary routes.
+- [x] Ensure each page has a contained intro, content body, and deliberate ending before the shared footer.
+- [x] Prevent the home page and internal pages from feeling like one continuous scroll narrative.
+- [x] Keep navigation as the primary transition between standalone pages.
+- [x] Verify page boundaries, footer behavior, and navigation at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after the standalone-page revision.
