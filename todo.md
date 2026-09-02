@@ -11078,3 +11078,13 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Keep numbered golden-ratio boxes visually bolder than the surrounding keylines.
 - [x] Verify the hierarchy on representative desktop, iPad Pro, and mobile pages.
 - [ ] Save a new checkpoint after verification.
+
+## Footer simplification — 2026-09-02
+
+- [x] Remove the repeated footer navigation menu from every page.
+- [x] Keep the burnt-orange Richard Cook ident ranged left.
+- [x] Place `hello@richardcook.uk` alongside the ident on the same horizontal alignment.
+- [x] Place `© richardcook.uk` across the same footer row.
+- [x] Keep the layout responsive without reintroducing stacked navigation columns.
+- [x] Verify the footer on desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
