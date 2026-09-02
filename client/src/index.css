@@ -143,3 +143,8 @@ details summary::-webkit-details-marker { display:none; }
 .hero-without-art .hero-copy { max-width:900px; }
 .hero-without-art h1 { max-width:900px; }
 @media (max-width:1050px) { .hero-without-art { grid-template-columns:minmax(0,1fr); } }
+
+/* Masthead refinement: nav numerals sit on the label’s first baseline for a cleaner index. */
+.nav-link { align-items:flex-start; }
+.nav-number { line-height:1; margin-top:1px; }
+.site-nav { align-items:flex-start; }

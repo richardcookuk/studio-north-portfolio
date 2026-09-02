@@ -52,7 +52,6 @@ function Layout({ children }: { children: React.ReactNode }) {
       <nav className={open ? "site-nav is-open" : "site-nav"} aria-label="Primary navigation">
         {nav.map((item, index) => <Link key={item.href} href={item.href} className={location === item.href ? "nav-link active" : "nav-link"}><span className="nav-number">0{index + 1}</span>{item.label}</Link>)}
       </nav>
-      <div className="header-meta"><span>North Yorkshire / Global</span><span>Strategic counsel, media, crisis</span></div>
     </header>
     <main key={location} className="page-main">{children}</main>
     <footer className="site-footer"><div><Logo /><p className="footer-line">Clear, credible strategic communications, media counsel and crisis response.</p></div><div className="footer-links"><span className="eyebrow">Briefing index</span>{nav.map((item, index) => <Link key={item.href} href={item.href}><span className="footer-number">0{index + 1}</span>{item.label}</Link>)}</div><div className="footer-contact"><span className="eyebrow">Start a conversation</span><Link href="/contact" className="text-link">Arrange a confidential conversation <ArrowUpRight size={15} /></Link><p>© Richard Cook Strategic Communications</p></div></footer>

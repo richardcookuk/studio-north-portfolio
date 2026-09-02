@@ -11003,3 +11003,11 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Keep navigation as the primary transition between standalone pages.
 - [x] Verify page boundaries, footer behavior, and navigation at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after the standalone-page revision.
+
+## Navigation masthead refinement — 2026-09-02
+
+- [x] Top-align each navigation number with the first line of its page label.
+- [x] Remove “North Yorkshire / Global” from the header.
+- [x] Remove “Strategic counsel, media, crisis” from the header.
+- [x] Verify spacing and alignment at desktop and tablet widths.
+- [ ] Save a new checkpoint after verification.
