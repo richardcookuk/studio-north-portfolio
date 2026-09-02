@@ -11227,3 +11227,12 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Leave header/footer white dots and CTA black dots unchanged.
 - [x] Verify representative internal pages at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Number-box typography refinement — 2026-09-02
+
+- [x] Reduce internal number text by approximately 25%.
+- [x] Align the top of each number with the dot’s 38% position.
+- [x] Preserve clear whitespace between the number and burnt-orange dot.
+- [x] Keep the number-box proportions, border, and dot position unchanged.
+- [x] Verify representative internal pages at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
