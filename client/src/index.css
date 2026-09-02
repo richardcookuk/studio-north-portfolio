@@ -158,3 +158,9 @@ body { letter-spacing:.008em; }
 .page-intro-utility { grid-template-columns:1fr; }
 .page-intro-utility .intro-index { display:none; }
 @media (max-width:760px) { .intro-index { width:min(100%, 210px); min-height:130px; font-size:92px; margin-bottom:45px; } .page-intro-utility { display:block; } }
+
+/* Geometry correction: the frame must be golden-ratio in rendered pixels, not only in its declared aspect ratio. */
+.page-intro { grid-template-columns:minmax(220px,.34fr) minmax(0,1fr); }
+.intro-index { width:100%; max-width:250px; min-height:0; height:auto; aspect-ratio:1.618 / 1; align-self:start; }
+@media (max-width:1050px) { .page-intro { grid-template-columns:minmax(200px,.34fr) minmax(0,1fr); } }
+@media (max-width:760px) { .page-intro { display:block; } .intro-index { width:min(100%,210px); max-width:210px; min-height:0; aspect-ratio:1.618 / 1; } }

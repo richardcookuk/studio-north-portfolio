@@ -11027,3 +11027,10 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [ ] Preserve the existing clean scale, hierarchy, and restrained editorial look.
 - [ ] Verify page-heading composition at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Golden-ratio frame correction — 2026-09-02
+
+- [x] Correct the page-number frame so the rendered outer width is 1.618 times its height.
+- [x] Prevent grid constraints and minimum height from making the frame appear square.
+- [x] Verify the proportion at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
