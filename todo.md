@@ -10963,3 +10963,26 @@ The site is being rebuilt around Richard Cook Strategic Communications with a bu
 ## End.
 
 -
+
+## Approved motif revision — 2026-09-02
+
+- [ ] Replace the current tilted/diamond ident with a plain burnt-orange golden-ratio rectangle.
+- [ ] Use the rectangle in portrait format for the masthead mark.
+- [ ] Use the rectangle in landscape format for the orange feature panel currently carrying the numbered line.
+- [ ] Remove the inner white square, cross, black diamond, and other internal artwork marks.
+- [ ] Repeat the plain rectangle motif selectively elsewhere as a consistent brand device.
+- [ ] Add “Arrange a Confidential Conversation” linked to `mailto:hello@richardcook.uk` where the motif functions as the CTA panel.
+- [ ] Verify the revised motif at desktop, iPad/tablet, and mobile widths.
+- [ ] Save a new checkpoint after verification.
+
+## Motif source of truth
+
+The user approved a simple burnt-orange golden-ratio rectangle. The rectangle should remain plain unless it contains the explicit confidential-conversation CTA. Do not reintroduce the previous cross/diamond artwork.
+
+## Current status
+
+- [x] User approved implementation.
+- [x] Plan updated.
+- [ ] Frontend motif implementation pending.
+- [ ] Contact link verification pending.
+- [ ] New checkpoint pending.
