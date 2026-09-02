@@ -11105,3 +11105,10 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Preserve the currently approved dot size.
 - [x] Verify the ident and footer at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Ident dot upper-right position — 2026-09-02
+
+- [x] Move the white dot to 38% from the top and 38% from the right edge of the ident rectangle.
+- [x] Preserve the current dot size.
+- [x] Verify the header and footer ident at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
