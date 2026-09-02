@@ -170,3 +170,8 @@ body { letter-spacing:.008em; }
 .copy-keyline { width:100%; border-top:1px solid var(--line); margin-bottom:30px; }
 .lead-line { font-size:clamp(22px,2.4vw,34px)!important; line-height:1.12!important; color:var(--ink)!important; max-width:760px; }
 @media (max-width:760px) { .page01-body { padding-top:55px; } }
+
+/* Keyline system: all page rules echo the left-hand burnt-orange cerebral line; number boxes stay stronger and solid. */
+:root { --line: color-mix(in srgb, var(--orange) 42%, transparent); }
+.dark-panel .text-list, .dark-panel .text-list li { border-color: color-mix(in srgb, var(--orange) 42%, transparent); }
+.intro-index { border-color:var(--orange); border-width:1.5px; }

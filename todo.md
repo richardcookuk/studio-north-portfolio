@@ -11070,3 +11070,11 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Replace it with “Identify the communications issue creating the greatest strategic or reputational drag – to establish priorities that address them.” if present.
 - [x] Run checks and verify the rendered Page 03 route.
 - [ ] Save a new checkpoint after verification.
+
+## Burnt-orange keyline refinement — 2026-09-02
+
+- [x] Change page keylines and horizontal rules to the shared burnt-orange color.
+- [x] Keep the left-hand vertical cerebral keyline as the visual reference.
+- [x] Keep numbered golden-ratio boxes visually bolder than the surrounding keylines.
+- [x] Verify the hierarchy on representative desktop, iPad Pro, and mobile pages.
+- [ ] Save a new checkpoint after verification.
