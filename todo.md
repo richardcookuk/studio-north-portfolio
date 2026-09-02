@@ -11019,3 +11019,11 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Preserve only necessary navigation labels, accessibility labels, and clearly approved CTA wording.
 - [x] Verify all primary routes after the copy cleanup.
 - [ ] Save a new checkpoint after verification.
+
+## Type and page-number refinement — 2026-09-02
+
+- [ ] Slightly increase letter spacing across the type system without changing the overall type direction.
+- [ ] Place large page numbers inside burnt-orange outlined golden-ratio rectangles.
+- [ ] Preserve the existing clean scale, hierarchy, and restrained editorial look.
+- [ ] Verify page-heading composition at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.

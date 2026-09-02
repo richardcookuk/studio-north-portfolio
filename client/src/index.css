@@ -148,3 +148,13 @@ details summary::-webkit-details-marker { display:none; }
 .nav-link { align-items:flex-start; }
 .nav-number { line-height:1; margin-top:1px; }
 .site-nav { align-items:flex-start; }
+
+/* Type refinement: open the tracking slightly while keeping the existing clean Helvetica-led character. */
+body { letter-spacing:.008em; }
+.hero h1, .page-intro h1, .home-brief h2, .split-section h2, .statement-section p, .orange-panel h2, .dark-cta h2, .contact-section h2, .testimonial blockquote { letter-spacing:-.055em; }
+.nav-link, .footer-links a, .eyebrow, .cta, .text-link { letter-spacing:.055em; }
+/* Page numbers: a precise golden-ratio frame rather than a bare oversized numeral. */
+.intro-index { width:min(100%, 250px); min-height:154px; aspect-ratio:1.618 / 1; box-sizing:border-box; border:1.5px solid var(--orange); padding:15px 17px 9px; display:flex; align-items:flex-end; font-size:clamp(66px, 10vw, 128px); line-height:.72; letter-spacing:-.08em; }
+.page-intro-utility { grid-template-columns:1fr; }
+.page-intro-utility .intro-index { display:none; }
+@media (max-width:760px) { .intro-index { width:min(100%, 210px); min-height:130px; font-size:92px; margin-bottom:45px; } .page-intro-utility { display:block; } }
