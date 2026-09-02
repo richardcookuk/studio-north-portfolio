@@ -11148,3 +11148,21 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Preserve the mailto link and landscape golden-ratio button proportions.
 - [x] Verify representative CTAs at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Home hero three-dot ident — 2026-09-02
+
+- [x] Add white dots at the top-left, top-right, and bottom-left power points of the home hero ident.
+- [x] Leave the bottom-right power point blank.
+- [x] Use 38% inset positioning from each relevant edge and preserve the current dot size.
+- [x] Keep header/footer ident and CTA dots unchanged.
+- [x] Verify the home hero ident at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
+
+## Home hero black dot — 2026-09-02
+
+- [ ] Add one black dot to the home hero ident only at the bottom-right power point.
+- [ ] Position its centre 38% from the right and 38% from the bottom edge.
+- [ ] Keep the three white hero dots unchanged.
+- [ ] Leave header/footer ident dots and CTA dots unchanged.
+- [ ] Verify the hero ident at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.

@@ -211,7 +211,10 @@ body { letter-spacing:.008em; }
 .hero-headline-row { display:flex; align-items:flex-start; gap:clamp(34px, 5vw, 72px); }
 .hero-headline-row h1 { flex:1 1 auto; min-width:0; max-width:850px; }
 .hero-ident { display:block; flex:0 0 clamp(135px, 11.8vw, 155px); width:clamp(135px, 11.8vw, 155px); aspect-ratio:.618 / 1; background:var(--orange); position:relative; align-self:flex-end; margin:0 0 30px; }
-.hero-ident-dot { position:absolute; width:6px; height:6px; right:38%; top:38%; transform:translate(50%, -50%); border-radius:50%; background:var(--paper); display:block; }
+.hero-ident-dot { position:absolute; width:6px; height:6px; border-radius:50%; background:var(--paper); display:block; }
+.hero-ident-dot-tl { left:38%; top:38%; transform:translate(-50%, -50%); }
+.hero-ident-dot-tr { right:38%; top:38%; transform:translate(50%, -50%); }
+.hero-ident-dot-bl { left:38%; bottom:38%; transform:translate(-50%, 50%); }
 @media (max-width:760px) {
   .hero-headline-row { display:block; }
   .hero-headline-row h1 { max-width:none; }
@@ -231,3 +234,6 @@ body { letter-spacing:.008em; }
 @media (max-width:760px) {
   .cta-dot { width:5px; height:5px; }
 }
+
+/* Home hero black dot: the only dark point, held at the bottom-right 38% power point. */
+.hero-ident-dot-br { right:38%; bottom:38%; transform:translate(50%, 50%); background:var(--ink); }
