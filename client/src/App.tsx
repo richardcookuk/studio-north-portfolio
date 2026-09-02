@@ -37,7 +37,7 @@ const testimonials = [
   { name: "David Cox", role: "Coca-Cola Asia Communications Director", note: "", quote: "Richard is very good at what he does. He knows media and news methodologies very well and how to engagingly and strategically embed that into corporate narratives. His skills and judgment have proved invaluable to us." },
 ];
 
-function Logo() { return <Link href="/" className="brand" aria-label="Richard Cook Strategic Communications home"><span className="brand-mark" aria-hidden="true" /><span className="brand-copy"><strong>RICHARD COOK</strong><small>STRATEGIC COMMUNICATIONS</small></span></Link>; }
+function Logo() { return <Link href="/" className="brand" aria-label="Richard Cook Strategic Communications home"><span className="brand-mark" aria-hidden="true"><span className="brand-dot" /></span><span className="brand-copy"><strong>RICHARD COOK</strong><small>STRATEGIC COMMUNICATIONS</small></span></Link>; }
 
 function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();

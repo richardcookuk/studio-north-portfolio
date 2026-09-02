@@ -191,3 +191,17 @@ body { letter-spacing:.008em; }
   .footer-email { margin-left:0; }
   .footer-copyright { margin-left:auto; }
 }
+
+/* Ident refinement: a more present lockup with one white dot at the rectangle's power point. */
+.brand { gap:14px; }
+.brand-mark { width:22px; height:36px; position:relative; }
+.brand-dot { position:absolute; width:6px; height:6px; right:38%; bottom:38%; border-radius:50%; background:var(--paper); display:block; }
+.brand-copy strong { font-size:14px; }
+.brand-copy small { font-size:8px; margin-top:6px; }
+@media (max-width:760px) {
+  .brand { gap:11px; }
+  .brand-mark { width:19px; height:31px; }
+  .brand-dot { width:5px; height:5px; }
+  .brand-copy strong { font-size:12px; }
+  .brand-copy small { font-size:7px; margin-top:5px; }
+}

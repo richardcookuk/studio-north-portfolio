@@ -11088,3 +11088,12 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Keep the layout responsive without reintroducing stacked navigation columns.
 - [x] Verify the footer on desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Ident refinement — 2026-09-02
+
+- [x] Increase the size of the burnt-orange rectangle in the header and footer ident.
+- [x] Increase the size of the ident text proportionately.
+- [x] Add one restrained white dot inside the rectangle at approximately 38% from the right and 38% from the bottom.
+- [x] Keep the dot visible but understated and preserve the golden-ratio grid.
+- [x] Verify the header and footer ident at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
