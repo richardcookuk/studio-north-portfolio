@@ -11112,3 +11112,30 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Preserve the current dot size.
 - [x] Verify the header and footer ident at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Home headline-side ident composition — 2026-09-02
+
+- [ ] Place the enlarged ident to the right of the home-page headline only.
+- [ ] Preserve the ident’s golden-ratio proportions and upper-right white-dot position.
+- [ ] Align the ident between the headline’s top and bottom text boundaries.
+- [ ] Keep generous space between headline, ident, and page border.
+- [ ] Verify the composition at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
+
+## Home portrait ident revision — 2026-09-02
+
+- [x] Change only the home headline-side ident to the portrait golden-ratio proportion.
+- [x] Preserve the upper-right white-dot position and current dot size.
+- [x] Rebalance its spacing beside the headline and within the text boundaries.
+- [x] Keep header/footer and other landscape ident applications unchanged.
+- [x] Verify the home composition at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
+
+## CTA button refinement — 2026-09-02
+
+- [x] Change the shared primary CTA label to “Get in Touch”.
+- [x] Keep every primary CTA linked to `mailto:hello@richardcook.uk`.
+- [x] Make the CTA a landscape golden-ratio rectangle.
+- [x] Preserve the burnt-orange treatment and clear text contrast.
+- [x] Verify the CTA on all routes at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.

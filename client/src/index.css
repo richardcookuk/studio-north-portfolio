@@ -205,3 +205,22 @@ body { letter-spacing:.008em; }
   .brand-copy strong { font-size:12px; }
   .brand-copy small { font-size:7px; margin-top:5px; }
 }
+
+/* Home hero ident: a quiet portrait counterweight set inside the headline's text boundaries. */
+.hero-home-ident .hero-copy { max-width:1180px; }
+.hero-headline-row { display:flex; align-items:flex-start; gap:clamp(34px, 5vw, 72px); }
+.hero-headline-row h1 { flex:1 1 auto; min-width:0; max-width:850px; }
+.hero-ident { display:block; flex:0 0 clamp(135px, 11.8vw, 155px); width:clamp(135px, 11.8vw, 155px); aspect-ratio:.618 / 1; background:var(--orange); position:relative; align-self:flex-end; margin:0 0 30px; }
+.hero-ident-dot { position:absolute; width:6px; height:6px; right:38%; top:38%; transform:translate(50%, -50%); border-radius:50%; background:var(--paper); display:block; }
+@media (max-width:760px) {
+  .hero-headline-row { display:block; }
+  .hero-headline-row h1 { max-width:none; }
+  .hero-ident { width:min(170px, 46vw); margin-top:44px; }
+  .hero-ident-dot { width:5px; height:5px; }
+}
+
+/* CTA refinement: every primary conversation button uses the same landscape golden-ratio proportion. */
+.cta { width:clamp(190px, 18vw, 240px); aspect-ratio:1.618 / 1; box-sizing:border-box; justify-content:space-between; padding:18px 20px; }
+@media (max-width:760px) {
+  .cta { width:min(230px, 100%); }
+}
