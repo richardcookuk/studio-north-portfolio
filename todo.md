@@ -11139,3 +11139,12 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Preserve the burnt-orange treatment and clear text contrast.
 - [x] Verify the CTA on all routes at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## CTA white-dot motif — 2026-09-02
+
+- [x] Remove the arrow from every “Get in Touch” CTA.
+- [x] Add the ident-style white dot inside each CTA.
+- [x] Position the dot 38% from the right edge and vertically centre it with the text.
+- [x] Preserve the mailto link and landscape golden-ratio button proportions.
+- [x] Verify representative CTAs at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.

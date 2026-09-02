@@ -47,7 +47,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 }
 
 function PageIntro({ index, title, intro }: { index: string; title: string; intro?: string }) { return <section className={index ? "page-intro" : "page-intro page-intro-utility"}><div className="intro-index">{index}</div><div><h1>{title}</h1>{intro && <p className="intro-copy">{intro}</p>}</div></section>; }
-function CTA({ children = "Get in Touch" }: { children?: React.ReactNode }) { return <a href="mailto:hello@richardcook.uk" className="cta"><span>{children}</span><ArrowUpRight size={17} /></a>; }
+function CTA({ children = "Get in Touch" }: { children?: React.ReactNode }) { return <a href="mailto:hello@richardcook.uk" className="cta"><span>{children}</span><span className="cta-dot" aria-hidden="true" /></a>; }
 function TextList({ items }: { items: string[] }) { return <ul className="text-list">{items.map((item) => <li key={item}><span className="list-mark">•</span><span>{item}</span></li>)}</ul>; }
 function Section({ title, children }: { title: string; children: React.ReactNode }) { return <section className="split-section"><div className="section-label" /><div><h2>{title}</h2><div className="section-body">{children}</div></div></section>; }
 
@@ -65,7 +65,7 @@ function CaseStudies() { return <><PageIntro index="05" title="Richard’s work 
 
 function Testimonials() { return <><PageIntro index="07" title="Testimonials" /><section className="testimonial-list">{testimonials.map((item, i) => <figure className="testimonial" key={item.name}><div className="quote-mark">“</div><blockquote>{item.quote}”</blockquote><figcaption><strong>{item.name}</strong><span>{item.role}</span>{item.note && <small>{item.note}</small>}</figcaption><div className="testimonial-index">0{i + 1}</div></figure>)}</section></>; }
 
-function Contact() { return <><PageIntro index="" title="Arrange a confidential conversation" /><section className="contact-section"><div><h2>All enquiries are welcome.</h2><p>hello@richardcook.uk</p><a className="cta" href="mailto:hello@richardcook.uk"><span>Get in Touch</span><ArrowUpRight size={17} /></a></div></section></>; }
+function Contact() { return <><PageIntro index="" title="Arrange a confidential conversation" /><section className="contact-section"><div><h2>All enquiries are welcome.</h2><p>hello@richardcook.uk</p><a className="cta" href="mailto:hello@richardcook.uk"><span>Get in Touch</span><span className="cta-dot" aria-hidden="true" /></a></div></section></>; }
 function NotFound() { return <section className="not-found"><h1>Page not found.</h1><Link href="/" className="text-link">Return home <ArrowUpRight size={15} /></Link></section>; }
 function Router() { return <Switch><Route path="/" component={Home} /><Route path="/brings" component={Brings} /><Route path="/expertise" component={Expertise} /><Route path="/working-with-richard" component={Working} /><Route path="/integrating" component={Integrating} /><Route path="/case-studies" component={CaseStudies} /><Route path="/testimonials" component={Testimonials} /><Route path="/contact" component={Contact} /><Route component={NotFound} /></Switch>; }
 export default function App() { return <ErrorBoundary><ThemeProvider defaultTheme="light"><TooltipProvider><Toaster /><Layout><Router /></Layout></TooltipProvider></ThemeProvider></ErrorBoundary>; }

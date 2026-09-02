@@ -224,3 +224,10 @@ body { letter-spacing:.008em; }
 @media (max-width:760px) {
   .cta { width:min(230px, 100%); }
 }
+
+/* CTA dot motif: the same white point as the ident, centred vertically and set 38% in from the right edge. */
+.cta { position:relative; justify-content:flex-start; }
+.cta-dot { position:absolute; width:6px; height:6px; right:38%; top:50%; transform:translate(50%, -50%); border-radius:50%; background:var(--paper); display:block; }
+@media (max-width:760px) {
+  .cta-dot { width:5px; height:5px; }
+}
