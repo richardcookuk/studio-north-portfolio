@@ -11042,3 +11042,10 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Lead the body with “Richard’s experience and work brings these perspectives together:”.
 - [x] Verify Page 01 at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Page 03 wording verification — 2026-09-02
+
+- [x] Confirm the current Page 03 source contains the requested session label.
+- [x] Apply “Newsroom And Media Communications Test” if the old wording remains.
+- [x] Run checks and verify the rendered Page 03 route.
+- [ ] Save a new checkpoint after verification.
