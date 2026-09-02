@@ -11011,3 +11011,11 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Remove “Strategic counsel, media, crisis” from the header.
 - [x] Verify spacing and alignment at desktop and tablet widths.
 - [ ] Save a new checkpoint after verification.
+
+## Approved copy only — 2026-09-02
+
+- [x] Compare all visible page copy against the supplied attachment.
+- [x] Remove added banners, editorial subheads, metadata, labels, and summaries that are not approved source copy.
+- [x] Preserve only necessary navigation labels, accessibility labels, and clearly approved CTA wording.
+- [x] Verify all primary routes after the copy cleanup.
+- [ ] Save a new checkpoint after verification.
