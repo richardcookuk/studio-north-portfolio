@@ -29,7 +29,7 @@ main { min-height:calc(100vh - 88px); }
 .eyebrow-dot { display:inline-block; width:6px; height:6px; background:var(--orange); border-radius:50%; }
 .hero { min-height:calc(100vh - 88px); padding:8.5vw 8vw 5vw 13vw; position:relative; display:grid; grid-template-columns:minmax(0,1.06fr) minmax(250px,.94fr); gap:6vw; align-items:center; }
 .hero-copy { max-width:700px; animation:rise .65s var(--ease) both; }
-.hero h1 { font-size:clamp(55px,8.1vw,128px); line-height:.87; letter-spacing:-.08em; margin:38px 0 30px; font-weight:800; }
+.hero h1 { font-size:clamp(55px,8.1vw,128px); line-height:.96; letter-spacing:-.08em; margin:38px 0 30px; font-weight:800; }
 .hero h1 em { color:var(--orange); font-style:normal; }
 .hero-sub { max-width:480px; font-size:clamp(20px,2.25vw,30px); line-height:1.05; letter-spacing:-.035em; margin:0 0 24px; }
 .hero-body { max-width:455px; color:var(--muted); font-size:15px; line-height:1.55; margin:0 0 30px; }
@@ -55,7 +55,7 @@ main { min-height:calc(100vh - 88px); }
 .text-link:hover { border-color:var(--orange); }
 .page-intro { padding:9vw 11vw 8vw 13vw; display:grid; grid-template-columns:minmax(150px,.28fr) minmax(0,1fr); gap:7vw; border-bottom:1px solid var(--line); position:relative; } .page-intro:before { content:""; position:absolute; left:7vw; top:0; bottom:0; width:1px; background:var(--orange); opacity:.5; } .contact-intro { grid-template-columns:1fr; padding-left:13vw; } .contact-intro:before { display:none; }
 .intro-index { font-size:clamp(80px,15vw,220px); line-height:.7; letter-spacing:-.1em; color:var(--orange); font-weight:800; }
-.page-intro h1 { max-width:850px; margin:36px 0 25px; font-size:clamp(50px,6.5vw,100px); line-height:.87; letter-spacing:-.08em; }
+.page-intro h1 { max-width:850px; margin:36px 0 25px; font-size:clamp(50px,6.5vw,100px); line-height:.96; letter-spacing:-.08em; }
 .intro-copy { max-width:600px; color:var(--muted); font-size:20px; line-height:1.25; margin:0; }
 .section-body { max-width:780px; }
 .text-list { list-style:none; padding:0; margin:35px 0 0; border-top:1px solid var(--line); }
@@ -153,6 +153,9 @@ details summary::-webkit-details-marker { display:none; }
 body { letter-spacing:.008em; }
 .hero h1, .page-intro h1, .home-brief h2, .split-section h2, .statement-section p, .orange-panel h2, .dark-cta h2, .contact-section h2, .testimonial blockquote { letter-spacing:-.055em; }
 .nav-link, .footer-links a, .eyebrow, .cta, .text-link { letter-spacing:.055em; }
+/* Headline leading: all primary page headlines share a .96 rhythm so stacked lines stay open and legible across the editorial system. */
+.hero h1, .page-intro h1 { line-height:.96; }
+
 /* Page numbers: a precise golden-ratio frame rather than a bare oversized numeral. */
 .intro-index { width:min(100%, 250px); min-height:154px; aspect-ratio:1.618 / 1; box-sizing:border-box; border:1.5px solid var(--orange); padding:15px 17px 9px; display:flex; align-items:flex-end; font-size:clamp(66px, 10vw, 128px); line-height:.72; letter-spacing:-.08em; }
 .page-intro-utility { grid-template-columns:1fr; }
