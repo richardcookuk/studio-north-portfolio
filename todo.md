@@ -11255,3 +11255,14 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Remove red keylines between bullet-point text rows.
 - [x] Verify all pages at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Numbering and spacing refinement — 2026-09-04
+
+- [ ] Standardize internal box numbers to match navigation: What Richard Cook brings = 02, Areas of Expertise = 03, Working with Richard = 04, Integrating Strategy = 05, Case Studies = 06, Testimonials = 07; keep Home unboxed.
+- [ ] Remove red dots from internal number boxes.
+- [ ] Bring the subheads on pages 3, 4, and 5 into the shared smaller subhead style.
+- [ ] Tighten the gap between subheads and main copy.
+- [ ] Remove keylines between subheads and main copy.
+- [ ] Tighten bullet/list spacing and paragraph breaks.
+- [ ] Verify all routes at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.

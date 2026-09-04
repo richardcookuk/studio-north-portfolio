@@ -291,3 +291,26 @@ body { letter-spacing:.008em; }
 /* Text lists: remove the competing red rules so bullet copy reads as one quiet editorial list. */
 .text-list { border:0!important; }
 .text-list li, .dark-panel .text-list li { border:0!important; }
+
+/* Spacing refinement: close the handoff from page introductions into body copy while preserving the editorial spine. */
+.page-intro { padding-top:7vw; padding-bottom:4.5vw; }
+.page01-body { padding-top:4.5vw; }
+.split-section { padding-top:6vw; padding-bottom:6vw; }
+
+/* Subhead system: Section headings now match the Home subhead in scale, weight, leading, and tracking. */
+.split-section .section-heading { max-width:480px; margin:0 0 18px; color:var(--ink); font-size:clamp(20px, 2.25vw, 30px); line-height:1.05; letter-spacing:-.035em; font-weight:400; }
+
+/* Copy rhythm: smaller list and paragraph intervals keep the text-led pages compact and easier to scan. */
+.text-list { margin-top:18px; }
+.text-list li { padding:10px 0; line-height:1.32; }
+.section-body p, .home-brief-grid p { margin-bottom:16px; }
+.hero-body { margin-bottom:22px; }
+
+@media (max-width:760px) {
+  .page-intro { padding-top:55px; padding-bottom:34px; }
+  .page01-body { padding-top:34px; }
+  .split-section { padding-top:48px; padding-bottom:48px; }
+  .split-section .section-heading { margin-bottom:16px; }
+  .text-list { margin-top:14px; }
+  .text-list li { padding:8px 0; }
+}
