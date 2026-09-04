@@ -11236,3 +11236,11 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Keep the number-box proportions, border, and dot position unchanged.
 - [x] Verify representative internal pages at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Mobile home headline clipping fix — 2026-09-04
+
+- [x] Audit the Home hero headline at mobile width and identify the clipping cause.
+- [x] Ensure “Richard Cook Strategic Communications” wraps within the viewport without cropping.
+- [x] Preserve the approved headline hierarchy and editorial spacing at larger widths.
+- [x] Verify Home at mobile, iPad Pro, and desktop widths.
+- [ ] Save a new checkpoint after verification.
