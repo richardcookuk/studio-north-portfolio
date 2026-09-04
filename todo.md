@@ -11283,3 +11283,11 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Remove remaining route-specific keylines and excessive whitespace where they conflict with the Home rhythm.
 - [x] Verify all routes at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Page 02 introductory copy verification — 2026-09-04
+
+- [x] Check whether the requested “Richard’s experience and work brings these perspectives together:” sentence is already present.
+- [x] If missing, place it once in the Page 02 introductory copy without duplicating it in the body.
+- [x] Run TypeScript and production build checks.
+- [x] Verify Page 02 at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
