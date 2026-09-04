@@ -276,3 +276,18 @@ body { letter-spacing:.008em; }
   .hero-home-ident .hero-headline-row h1 em { max-width:100%; }
   .hero-home-ident .hero-headline-row h1 { font-size:clamp(45px, 12vw, 62px); line-height:.96; }
 }
+
+/* Portfolio hierarchy refinement: bold page headlines mirror the Home hero; a single-line title remains black, while wrapped continuation lines carry the burnt-orange accent. */
+.hero h1, .page-intro h1 { color:var(--orange); font-weight:800; line-height:.96; }
+.hero h1::first-line, .page-intro h1::first-line { color:var(--ink); }
+
+/* Shared subhead system: all page introductions use the same scale, weight, leading, and ink color as the Home “Clear, credible strategic…” subhead. */
+.hero-sub, .intro-copy, .page01-subhead { max-width:480px; color:var(--ink); font-size:clamp(20px, 2.25vw, 30px); line-height:1.05; letter-spacing:-.035em; font-weight:400; }
+
+/* Get in Touch boxes: retain the landscape box but keep the treatment text-only. */
+.cta { justify-content:center; gap:0; }
+.cta-dot { display:none!important; }
+
+/* Text lists: remove the competing red rules so bullet copy reads as one quiet editorial list. */
+.text-list { border:0!important; }
+.text-list li, .dark-panel .text-list li { border:0!important; }

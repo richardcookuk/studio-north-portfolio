@@ -11244,3 +11244,14 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Preserve the approved headline hierarchy and editorial spacing at larger widths.
 - [x] Verify Home at mobile, iPad Pro, and desktop widths.
 - [ ] Save a new checkpoint after verification.
+
+## Portfolio visual simplification — 2026-09-04
+
+- [x] Remove the burnt-orange Home hero box, including on mobile.
+- [x] Standardize all page headline typography to the bold Home hero treatment.
+- [x] Standardize all page subheads to match the “Clear, credible strategic…” style and size.
+- [x] Repeat black/burnt-orange headline treatment only when a headline spans multiple lines; keep single-line headlines one colour.
+- [x] Remove the black dot from all Get in Touch boxes.
+- [x] Remove red keylines between bullet-point text rows.
+- [x] Verify all pages at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
