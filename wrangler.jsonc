@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "studio-north-portfolio",
-  "compatibility_date": "2026-09-04",
+  "compatibility_date": "2026-09-05",
   "assets": {
     "directory": "./dist/public",
     "not_found_handling": "single-page-application"
