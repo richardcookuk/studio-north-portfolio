@@ -323,3 +323,65 @@ body { letter-spacing:.008em; }
 @media (max-width:760px) {
   .page-intro h1 { margin:0 0 10px; }
 }
+
+/* Home-reference system: the Home page is the source of truth for every route’s display scale, subhead treatment, body copy, and vertical rhythm. */
+:root { --home-body-size:15px; --home-body-leading:1.55; --home-body-gap:30px; --home-subhead-size:clamp(20px, 2.25vw, 30px); --home-subhead-leading:1.05; }
+
+/* Primary headlines: match the Home hero scale and use black for the first line, then burnt orange only when the title wraps. */
+.page-intro h1 { max-width:900px; font-size:clamp(55px, 8.1vw, 128px); line-height:.96; letter-spacing:-.08em; font-weight:800; color:var(--orange); margin:0 0 22px; }
+.page-intro h1::first-line { color:var(--ink); }
+
+/* Shared subheads: PageIntro introductions and body section leads now use the Home “Clear, credible strategic…” treatment. */
+.hero-sub, .intro-copy, .section-heading { max-width:480px; color:var(--ink); font-size:var(--home-subhead-size); line-height:var(--home-subhead-leading); letter-spacing:-.035em; font-weight:400; margin:0 0 24px; }
+
+/* Shared body copy: internal routes use the Home paragraph size, leading, colour, and breathing space. */
+.section-body p, .case-intro p, .case-main > p, .case-detail, .session p, .work-note p, .contact-section p { max-width:455px; color:var(--muted); font-size:var(--home-body-size); line-height:var(--home-body-leading); margin:0 0 var(--home-body-gap); }
+.section-body .lead-line { max-width:455px; color:var(--muted)!important; font-size:var(--home-body-size)!important; line-height:var(--home-body-leading)!important; font-weight:400!important; letter-spacing:0!important; margin:0 0 var(--home-body-gap); }
+.text-list { max-width:455px; margin:0 0 var(--home-body-gap); }
+.text-list li { font-size:var(--home-body-size); line-height:var(--home-body-leading); padding:10px 0; }
+
+/* Editorial spacing: keep the Home-like sequence without decorative rules inserted between text blocks. */
+.page-intro, .split-section { border-top:0; border-bottom:0; }
+.split-section { padding-top:6vw; padding-bottom:6vw; }
+.page-intro + .split-section { padding-top:4.5vw; }
+.page01-body { padding-top:4.5vw; }
+.copy-keyline { display:none; }
+
+/* Preserve the session grid as content structure, but remove its competing rules. */
+.session-grid { border-top:0; border-bottom:0; }
+.session { border-right:0; }
+
+@media (max-width:760px) {
+  .page-intro h1 { max-width:none; font-size:clamp(45px, 12vw, 62px); line-height:.96; margin:0 0 18px; }
+  .hero-sub, .intro-copy, .section-heading { margin-bottom:20px; }
+  .section-body p, .case-intro p, .case-main > p, .case-detail, .session p, .work-note p, .contact-section p { margin-bottom:22px; }
+  .section-body .lead-line { margin-bottom:22px; }
+  .split-section { padding-top:48px; padding-bottom:48px; }
+  .page-intro + .split-section { padding-top:34px; }
+}
+
+/* Final Home-reference rhythm: once a page subhead ends, body copy begins after the same compact breath used by the Home hero. */
+.page-intro { padding-bottom:24px; }
+.page-intro + .split-section { padding-top:0; }
+.page-intro + .case-intro { padding-top:0; }
+.page-intro + .testimonial-list { margin-top:0; }
+
+@media (max-width:760px) {
+  .page-intro { padding-bottom:24px; }
+  .page-intro + .split-section { padding-top:0; }
+  .page-intro + .case-intro { padding-top:0; }
+}
+
+/* Mobile consistency correction: the structural label must not create an extra blank band before body copy. */
+@media (max-width:760px) {
+  .split-section .section-label { margin-bottom:0; }
+}
+
+/* Home-reference cleanup: narrative lists begin directly after their intro copy without a second horizontal divider. */
+.case-list, .testimonial-list { border-top:0; }
+
+/* Cross-route type normalization: secondary display headings inherit the same restrained Home subhead scale instead of route-specific poster sizes. */
+.split-section .section-heading, .case-main h2, .session h3, .testimonial blockquote, .contact-section h2, .dark-cta h2 { max-width:480px; font-size:var(--home-subhead-size); line-height:var(--home-subhead-leading); letter-spacing:-.035em; font-weight:400; }
+.case-main h2, .session h3 { margin:0 0 18px; }
+.testimonial blockquote { margin:0 0 24px; }
+.contact-section h2, .dark-cta h2 { color:inherit; margin:0 0 24px; }

@@ -11273,3 +11273,13 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [x] Reduce the headline-to-subhead gap while retaining clear white space.
 - [x] Verify all page-intro variants at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Home-reference consistency refinement — 2026-09-04
+
+- [x] Audit all route-specific headline, subhead, body, spacing, and keyline rules against the current Home page.
+- [x] Standardize internal page headline scale and black/burnt-orange treatment to the Home reference.
+- [x] Standardize subhead scale, weight, leading, and color to the Home reference.
+- [x] Standardize body copy size, leading, paragraph spacing, and list rhythm to the Home reference.
+- [x] Remove remaining route-specific keylines and excessive whitespace where they conflict with the Home rhythm.
+- [x] Verify all routes at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.
