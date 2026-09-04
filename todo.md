@@ -11266,3 +11266,10 @@ The user approved a simple burnt-orange golden-ratio rectangle. The rectangle sh
 - [ ] Tighten bullet/list spacing and paragraph breaks.
 - [ ] Verify all routes at desktop, iPad Pro, and mobile widths.
 - [ ] Save a new checkpoint after verification.
+
+## Page-intro keyline and spacing refinement — 2026-09-04
+
+- [x] Remove the keyline between page headlines and subheads.
+- [x] Reduce the headline-to-subhead gap while retaining clear white space.
+- [x] Verify all page-intro variants at desktop, iPad Pro, and mobile widths.
+- [ ] Save a new checkpoint after verification.

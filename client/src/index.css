@@ -314,3 +314,12 @@ body { letter-spacing:.008em; }
   .text-list { margin-top:14px; }
   .text-list li { padding:8px 0; }
 }
+
+/* Page-intro refinement: the headline and subhead now form one continuous text block, separated only by a restrained breath of white space. */
+.page-intro { border-bottom:0; }
+.page-intro h1 { margin:0 0 12px; }
+.page-intro .intro-copy { margin:0; }
+
+@media (max-width:760px) {
+  .page-intro h1 { margin:0 0 10px; }
+}
